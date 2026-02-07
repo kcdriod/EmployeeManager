@@ -7,6 +7,10 @@ import com.kcorp.service.EmployeeService;
 import java.util.List;
 
 @RestController()
+@CrossOrigin(
+        origins = "http://localhost:3000",
+        methods = {RequestMethod.GET, RequestMethod.POST, RequestMethod.PUT, RequestMethod.DELETE, RequestMethod.OPTIONS}
+)
 public class Employees {
     private final EmployeeService employeeService;
 
@@ -28,6 +32,10 @@ public class Employees {
     @PutMapping("/employees/{id}")
     public Employee updateEmployee(@Valid @RequestBody Employee employee, @PathVariable long id) {
         return employeeService.updateEmployee(id , employee);
+    }
+    @DeleteMapping("/employees/{id}")
+    public  void deleteEmployee(@PathVariable Long id) {
+         employeeService.deleteEmployee(id);
     }
 
 }
