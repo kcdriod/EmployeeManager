@@ -35,4 +35,12 @@ public class EmployeeService {
         }
 
     }
+    public void deleteEmployee(Long id) {
+        if (employeeRepository.findById(id).isPresent()) {
+            employeeRepository.deleteById(id);
+
+        }else {
+            throw new ResourceNotFoundException("Employee not found id: "+id);
+        }
+    }
 }

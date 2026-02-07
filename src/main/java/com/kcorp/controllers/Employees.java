@@ -29,5 +29,9 @@ public class Employees {
     public Employee updateEmployee(@Valid @RequestBody Employee employee, @PathVariable long id) {
         return employeeService.updateEmployee(id , employee);
     }
+    @DeleteMapping("/employees/{id}")
+    public  void deleteEmployee(@PathVariable Long id) {
+         employeeService.deleteEmployee(id);
+    }
 
 }
