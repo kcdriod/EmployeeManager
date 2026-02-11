@@ -28,7 +28,7 @@ public class EmployeeService {
            existingEmployee.setName(employee.getName());
            existingEmployee.setEmail(employee.getEmail());
            existingEmployee.setDepartment(employee.getDepartment());
-           existingEmployee.setSalary(employee.getSalary());
+           existingEmployee.setSalary((long) employee.getSalary());
            return employeeRepository.save(existingEmployee);
         } else {
             throw new ResourceNotFoundException("Employee not found id: "+id);

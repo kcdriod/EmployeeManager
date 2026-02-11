@@ -23,7 +23,7 @@ public class Employee {
     @NotBlank
     private String department;
     @Positive
-    private double salary;
+    private Long salary;
 
     // Default constructor (required by JPA)
     public Employee() {
@@ -65,7 +65,7 @@ public class Employee {
         this.department = department;
     }
 
-    public void setSalary(double salary) {
+    public void setSalary(Long salary) {
         this.salary = salary;
     }
 }
