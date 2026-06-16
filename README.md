@@ -185,6 +185,4 @@ Build output:
 - Frontend expects backend at `http://localhost:8080` (`frontend/employee-ui/src/api.js`).
 - CORS in backend is configured for frontend origin `http://localhost:3000`.
 - Validation errors are returned as JSON map (for example `{ "email": "must be a well-formed email address" }`) and displayed in the frontend form.
-
-
 - TEST
